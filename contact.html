@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cresta Design | お問い合わせ</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header contact__header">
+    <div class="inner">
+        <nav class="header__nav">
+            <h1 class="header__site-title">
+                <a href="index.html">Cresta Design</a>
+            </h1>
+            <ul class="header__list pc">
+                <li class="header__nav-item"><a class="header__nav-link" href="index.html#concept">Concept</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="index.html#service">Service</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="index.html#works">Works</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="">Contact</a></li>
+            </ul>
+            <!-- ハンバーガーメニュー -->
+            <div class="header__buger">
+                <input type="checkbox" id="header__buger-checkBox">
+                <label for="header__buger-checkBox" class="header__buger-btn menu__btn">
+                    <span></span>
+                </label>
+                <!--ここからメニュー-->
+                <div class="header__buger-menu">
+                    <ul class="header__list-sp">
+                        <li class="header__buger-item"><a class="header__buger-link" href="">Concept</a></li>
+                        <li class="header__buger-item"><a class="header__buger-link" href="">Service</a></li>
+                        <li class="header__buger-item"><a class="header__buger-link" href="">Works</a></li>
+                        <li class="header__buger-item"><a class="header__buger-link" href="">Contact</a></li>
+                    </ul>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="MV__contact bgimg-slider">
+    <div class="inner">
+        <div class="MV__txt MV__contact-txt">
+            <p class="MV__title MV__contact-title">Contact</p>
+        </div>
+        <p class="bg__txt">Contact us</p>
+    </div>
+</div>
+<main class="main" role="main">
+    <section class="form">
+        <form action="" class="form__inner">
+            <div class="form__checkBox">
+                <label class="form__label">お問い合わせ内容</label>
+                <ul class="form__list">
+                    <li class="form__item">
+                        <input class="form__radio-btn" name="radio" id="radio-1" type="radio"><label class="form__label-radio" for="radio-1">資料請求</label>
+                    </li>
+                    <li class="form__item">
+                        <input class="form__radio-btn" name="radio" id="radio-2" type="radio"><label class="form__label-radio" for="radio-2">お電話でのご相談を希望</label>
+                    </li>
+                    <li class="form__item">
+                        <input class="form__radio-btn" name="radio" id="radio-3" type="radio"><label class="form__label-radio" for="radio-3">お申し込み</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="form__txt">
+                <label class="form__label" for="name">担当者名</label>
+                <input class="form__txt-area" id="name" name="" type="text">
+            </div>
+            <div class="form__txt">
+                <label class="form__label" for="tel">電話番号</label>
+                <input class="form__txt-area" id="tel" name="tel" type="number">
+            </div>
+            <div class="form__txt">
+                <label class="form__label" for="mail">メールアドレス</label>
+                <input class="form__txt-area" id="mail" type="email">
+            </div>
+            <div class="form__txt">
+                <label class="form__label" for="text-area-l">その他</label>
+                <textarea class="form__txt-area" name="" id="text-area-l" cols="30" rows="8"></textarea>
+            </div>
+        </form>
+        <div class="btn contact__btn">
+                <a class="btn__link" href="">Submit</a>
+            </div>
+    </section>
+</main>
+<footer class="footer">
+    <small class="copy">&copy;cresta.design all rights reserved</small>
+</footer>
+</body>
+</html>
