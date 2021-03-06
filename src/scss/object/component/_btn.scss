@@ -1,0 +1,36 @@
+@import "../../foundation/var";
+
+/* -------------------------------------------
+ボタン
+---------------------------------------------- */
+.btn__link {
+  display: inline-block;
+  width: 23.5rem;
+  padding: 1.75rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #171717;
+  border: 2px solid transparent;
+  border-radius: 5.9rem;
+  text-align: center;
+  background-color: #F7D43F;
+  transition: .23s;
+  box-sizing: border-box;
+}
+.btn__link:hover,
+.btn__link:focus {
+  background-color: transparent;
+  border-color: #F7D43F;
+  color: #F7D43F;
+}
+
+.btn {
+  text-align: center;
+  margin-bottom: 7rem;
+  @include mq(sp){
+    margin-bottom: 4rem;
+  }
+}
+/* -------------------------------------------
+ボタン
+---------------------------------------------- */

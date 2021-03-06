@@ -1,0 +1,27 @@
+@import "../../foundation/var";
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-hidden-sp {
+  @include mq(sp) {
+    display: none !important;
+  }
+}
+
+.u-hidden-tab {
+  @include mq(tab) {
+    display: none !important;
+  }
+}
+
+.u-hidden-pc {
+  @include mq(pc) {
+    display: none !important;
+  }
+}
+
+.u-mb-10 {
+  margin-bottom: 10px !important;
+}
