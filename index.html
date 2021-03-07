@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cresta Design | 快適なオフィスをデザインする会社</title>
   <link rel="stylesheet" href="dist/css/style.css">
-
 </head>
 <body>
     <header class="header">
@@ -150,43 +149,12 @@
                 </div>
             </section><!-- /.contact -->
         </main>
-<footer class="footer">
-    <small class="copy">&copy;cresta.design all rights reserved</small>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="dist/js/jquery.bgswitcher.js"></script>
-<script>
-        $(function() {
-            $('.bgimg-slider').bgSwitcher({
-                images: ['dist/img/fv-bgi_01@2x.jpg','dist/img/fv-bgi_02@2x.jpg','dist/img/fv-bgi_03@2x.jpg'],
-                effect: "drop",
-                easing: "linear"
-            });
-        });
-</script><!-- スライダー -->
+    <footer class="footer">
+        <small class="copy">&copy;cresta.design all rights reserved</small>
+    </footer>
 
-<script>
-    $(window).on('scroll', function () {
-        if ($('.MV').height() < $(this).scrollTop()) {
-        $('.header').addClass('change-color'); }
-        else {
-        $('.header').removeClass('change-color'); }
-    });
-</script><!-- ヘッダー スクロールしたら色が変わる -->
-
-<script>
-    $('a[href^="#"]').click(function() {
-        // スクロールの速度
-        let speed = 400; // ミリ秒で記述
-        let href = $(this).attr("href");
-        let target = $(href == "#" || href == "" ? 'html' : href);
-        let position = target.offset().top;
-        $('body,html').animate({
-          scrollTop: position
-        }, speed, 'swing');
-        return false;
-      });
-</script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="dist/js/jquery.bgswitcher.js"></script>
+    <script type="text/javascript" src="dist/js/script.js"></script>
 </body>
 </html>

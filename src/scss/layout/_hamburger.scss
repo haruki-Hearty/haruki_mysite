@@ -23,7 +23,9 @@
 #header__buger-checkBox:checked ~ .header__buger-menu {
   left: 0;/*メニューを画面内へ*/
 }
-
+#concept:active {
+  left: 100%;
+}
 .header__buger {
     display: none;
     @include mq(sp){

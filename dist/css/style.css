@@ -309,6 +309,10 @@ header
   /*メニューを画面内へ*/
 }
 
+#concept:active {
+  left: 100%;
+}
+
 .header__buger {
   display: none;
   /*メニューを開いた時のリストを中央に*/
