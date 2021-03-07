@@ -1,2 +1,97 @@
 @import "../foundation/var";
 
+/* -------------------------------------------
+ハンバーガーメニュー
+---------------------------------------------- */
+#header__buger-checkBox:checked ~ .menu__btn span {
+  background-color: rgba(255, 255, 255, 0);
+  /*メニューオープン時は真ん中の線を透明にする*/
+}
+#header__buger-checkBox:checked ~ .menu__btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: all .3s;
+}/* ボタンがタップされたとき三本線を「×」マークにするための記述 */
+#header__buger-checkBox:checked ~ .menu__btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: all .3s;
+}/* ボタンがタップされたとき三本線を「×」マークにするための記述 */
+#header__buger-checkBox {
+  display: none;
+}/* チェックボックスを消す */
+#header__buger-checkBox:checked ~ .header__buger-menu {
+  left: 0;/*メニューを画面内へ*/
+}
+
+.header__buger {
+    display: none;
+    @include mq(sp){
+      display: block;
+
+      &-btn {
+        position: fixed;
+        top: 16px;
+        right: 0px;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        span,span::before,span::after {
+          content: '';
+          display: block;
+          height: 3px;
+          width: 25px;
+          border-radius: 3px;
+          background-color: #{$colorWhite};
+          position: absolute;
+        }
+        span:before {
+          bottom: 8px;
+        }
+        span:after {
+          top: 8px;
+        }
+      }
+    }
+    &-menu {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 100%;/*leftの値を変更してメニューを画面外へ*/
+      z-index: 80;
+      background: #{$colorNavyBlue};
+      transition: all 0.4s;/*メニューが横から出てくる速度設定*/
+    }
+
+    &-list-sp {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }/*メニューを開いた時のリストを中央に*/
+    &-item {
+      display: inline;
+    }
+    &-link {
+      display: inline-block;
+      text-align: center;
+      font-size: 2.4rem;
+      box-sizing: border-box;
+      color:#{$colorWhite};
+      text-decoration: none;
+      padding: 2.5rem 0;
+      position: relative;
+      &:active {
+        width: 100%;
+      }
+    }
+  }
+/* -------------------------------------------
+ハンバーガーメニュー
+---------------------------------------------- */

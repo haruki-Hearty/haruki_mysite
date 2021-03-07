@@ -1,0 +1,120 @@
+@import "../../foundation/var";
+
+/* -------------------------------------------
+contact page
+---------------------------------------------- */
+.contact__header {
+  position: absolute;
+  .header__buger-btn {
+    position: absolute;
+  }
+  .header__site-title {
+    padding-left: 1rem;
+  }
+  .header__nav {
+    padding: 4rem 0;
+    @include mq(sp){
+      padding: 3rem 0;
+    }
+  }
+}
+.MV__contact {
+  position: relative;
+  background: url(#{$bgpath}contact-page-bgi@2x.jpg) no-repeat center;
+  background-size: cover;
+  padding-bottom: 3.5rem;
+  @include mq(sp){
+    padding-bottom: 5rem;
+  }
+  .MV__txt {
+    display: block;
+  }
+  .MV__title {
+    margin-bottom: 3rem;
+    padding-top: 18.5rem;
+    font-size: 6rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #{$colorWhite};
+
+    @include mq(sp){
+      margin-bottom: 4rem;
+      padding-top: 17.5rem;
+      font-size: 3rem;
+      letter-spacing: .1em
+    }
+  }
+  .bg__txt {
+    color: #{$colorWhite};
+  }
+}
+.form {
+  padding: 9.5rem 0 8rem;
+  text-align: center;
+  @include mq(sp){
+    padding-top: 9.5rem;
+    padding-bottom: 8rem;
+  }
+  &__inner {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7rem;
+    padding-right: 2%;
+    padding-left: 2%;
+    @include mq(sp){
+      padding: 0 4%;
+      margin-bottom: 6.5rem;
+    }
+  }
+  &__checkBox {
+    text-align: left;
+    margin-bottom: 2rem;
+    @include mq(sp){
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq(sp){
+      flex-direction: column;
+    }
+  }
+  &__item {
+    @include mq(sp){
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__radio-btn {
+    margin-right: .5rem;
+  }
+  &__label-radio {
+    margin-right: 1.5rem;
+  }
+  &__label {
+    display: block;
+    margin-bottom: .5rem;
+    text-align: left;
+    font-weight: bold;
+    @include mq(sp){
+      margin-bottom: 0.7rem;
+    }
+  }
+  &__txt {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__txt-area {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.contact__btn {
+  margin-bottom: 0;
+}
+/* -------------------------------------------
+contact page
+---------------------------------------------- */

@@ -143,16 +143,258 @@ legend {
   display: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: 'Noto Serif','Noto Serif JP', serif;
+  color: #282F35;
+  letter-spacing: .05em;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.inner {
+  max-width: 1200px;
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.section__inner {
+  max-width: 1000px;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 100px 50px 0;
+}
+
+.change-color {
+  background: #282F35;
+}
+
+/* -------------------------------------------
+base
+---------------------------------------------- */
+/* -------------------------------------------
+header
+---------------------------------------------- */
+/* -------------------------------------------
+モジュール
+---------------------------------------------- */
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 60px;
+  font-size: 6rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 5px;
+  margin-left: 30px;
+  margin-left: 3rem;
+  background-color: #282F35;
+}
+
+.bg__txt {
+  font-size: 90px;
+  font-size: 9rem;
+  font-weight: bold;
+  color: #171717;
+  opacity: 0.05;
+}
+
+/* -------------------------------------------
+モジュール
+---------------------------------------------- */
+/* -------------------------------------------
+header
+---------------------------------------------- */
+.header {
+  position: fixed;
+  width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  z-index: 10;
+  font-style: italic;
+}
+
+.header__site-title {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+  padding: 3rem 0;
+}
+
+.header__nav-item + .header__nav-item {
+  margin-left: 30px;
+  margin-left: 3rem;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* -------------------------------------------
+ハンバーガーメニュー
+---------------------------------------------- */
+#header__buger-checkBox:checked ~ .menu__btn span {
+  background-color: rgba(255, 255, 255, 0);
+  /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#header__buger-checkBox:checked ~ .menu__btn span::before {
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/* ボタンがタップされたとき三本線を「×」マークにするための記述 */
+#header__buger-checkBox:checked ~ .menu__btn span::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/* ボタンがタップされたとき三本線を「×」マークにするための記述 */
+#header__buger-checkBox {
+  display: none;
+}
+
+/* チェックボックスを消す */
+#header__buger-checkBox:checked ~ .header__buger-menu {
+  left: 0;
+  /*メニューを画面内へ*/
+}
+
+.header__buger {
+  display: none;
+  /*メニューを開いた時のリストを中央に*/
+}
+
+.header__buger-menu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  /*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background: #282F35;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  /*メニューが横から出てくる速度設定*/
+}
+
+.header__buger-list-sp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.header__buger-item {
+  display: inline;
+}
+
+.header__buger-link {
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 25px 0;
+  padding: 2.5rem 0;
+  position: relative;
+}
+
+.header__buger-link:active {
+  width: 100%;
+}
+
+/* -------------------------------------------
+ハンバーガーメニュー
+---------------------------------------------- */
+/* footer
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.footer {
+  height: 79px;
+  height: 7.9rem;
+  text-align: center;
+  line-height: 79px;
+  line-height: 7.9rem;
+}
+
+.footer .copy {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* footer end
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 /* -------------------------------------------
 ボタン
 ---------------------------------------------- */
 .btn__link {
   display: inline-block;
-  width: 376px;
+  width: 235px;
   width: 23.5rem;
-  padding: 28px;
+  padding: 17.5px;
   padding: 1.75rem;
-  font-size: 25.6px;
+  font-size: 16px;
   font-size: 1.6rem;
   font-weight: bold;
   color: #171717;
@@ -175,36 +417,636 @@ legend {
 
 .btn {
   text-align: center;
-  margin-bottom: 112px;
+  margin-bottom: 70px;
   margin-bottom: 7rem;
 }
 
 /* -------------------------------------------
 ボタン
 ---------------------------------------------- */
-.u-hidden {
-  display: none !important;
+/* -------------------------------------------
+contact page
+---------------------------------------------- */
+.contact__header {
+  position: absolute;
 }
 
-.u-mb-10 {
-  margin-bottom: 10px !important;
+.contact__header .header__buger-btn {
+  position: absolute;
 }
+
+.contact__header .header__site-title {
+  padding-left: 10px;
+  padding-left: 1rem;
+}
+
+.contact__header .header__nav {
+  padding: 40px 0;
+  padding: 4rem 0;
+}
+
+.MV__contact {
+  position: relative;
+  background: url(../img/contact-page-bgi@2x.jpg) no-repeat center;
+  background-size: cover;
+  padding-bottom: 35px;
+  padding-bottom: 3.5rem;
+}
+
+.MV__contact .MV__txt {
+  display: block;
+}
+
+.MV__contact .MV__title {
+  margin-bottom: 30px;
+  margin-bottom: 3rem;
+  padding-top: 185px;
+  padding-top: 18.5rem;
+  font-size: 60px;
+  font-size: 6rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+.MV__contact .bg__txt {
+  color: #FFFFFF;
+}
+
+.form {
+  padding: 95px 0 80px;
+  padding: 9.5rem 0 8rem;
+  text-align: center;
+}
+
+.form__inner {
+  max-width: 700px;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  margin-bottom: 7rem;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.form__checkBox {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+
+.form__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form__radio-btn {
+  margin-right: 5px;
+  margin-right: .5rem;
+}
+
+.form__label-radio {
+  margin-right: 15px;
+  margin-right: 1.5rem;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+  margin-bottom: .5rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form__txt {
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+
+.form__txt:last-child {
+  margin-bottom: 0;
+}
+
+.form__txt-area {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contact__btn {
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------
+contact page
+---------------------------------------------- */
+.MV {
+  position: relative;
+  background: url(../img/fv-bgi_01@2x.jpg) no-repeat center;
+  background-size: cover;
+  color: #FFFFFF;
+  height: 100vh;
+}
+
+.MV__txt {
+  display: inline-block;
+  text-align: center;
+}
+
+.MV__title {
+  padding-top: 410px;
+  padding-top: 41rem;
+  font-size: 70px;
+  font-size: 7rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.MV__sub-title {
+  margin-top: 22px;
+  margin-top: 2.2rem;
+  font-size: 40px;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* MV end
+===========================*/
+/* concept
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.concept {
+  text-align: center;
+  padding-top: 70px;
+  padding-top: 7rem;
+  padding-bottom: 70px;
+  padding-bottom: 7rem;
+}
+
+.concept .sp-only {
+  display: none;
+}
+
+.concept__title {
+  margin-bottom: 75px;
+  margin-bottom: 7.5rem;
+}
+
+.concept__sub-title {
+  font-size: 30px;
+  font-size: 3rem;
+  max-width: 620px;
+  max-width: 62rem;
+  margin: 0 auto 63px;
+  margin: 0 auto 6.3rem;
+}
+
+.concept__box-ly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 70px;
+  margin-bottom: 7rem;
+}
+
+.concept__txt {
+  max-width: 440px;
+  max-width: 44rem;
+  text-align: justify;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.875;
+}
+
+.concept .concept__img {
+  max-width: 440px;
+  max-width: 44rem;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.concept .bg__txt {
+  max-width: 1200px;
+  max-width: 120rem;
+  margin: 0 auto;
+  text-align: right;
+  letter-spacing: .05em;
+}
+
+/* concept end
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* works
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.works {
+  background: url(../img/works-bgi@2x.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 104px;
+  padding-top: 10.4rem;
+  padding-bottom: 55px;
+  padding-bottom: 5.5rem;
+}
+
+.works .title {
+  color: #FFFFFF;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 80px;
+  margin-bottom: 8rem;
+}
+
+.works .title::after {
+  background-color: #FFFFFF;
+  margin-left: 55px;
+  margin-left: 5.5rem;
+}
+
+.works .bg__txt {
+  color: #FFFFFF;
+  opacity: 0.1;
+  letter-spacing: .05em;
+}
+
+/* card */
+.card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1000px;
+  max-width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-bottom: 8rem;
+}
+
+.card {
+  width: 32%;
+  background-color: #FFFFFF;
+}
+
+.card__img-wrapper {
+  position: relative;
+  margin: 0;
+  padding-top: 62.25%;
+  overflow: hidden;
+}
+
+.card__img {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.card__txt {
+  padding: 23px;
+  padding: 2.3rem;
+  text-align: justify;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.875;
+}
+
+.card + .card {
+  margin-left: 2%;
+}
+
+/* card end*/
+/* works end
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* service
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.service {
+  padding-top: 100px;
+  padding-top: 10rem;
+  padding-bottom: 56px;
+  padding-bottom: 5.6rem;
+}
+
+.service__title {
+  max-width: 1000px;
+  width: 92%;
+  margin: 0 auto 80px;
+  margin: 0 auto 8rem;
+  letter-spacing: .1em;
+}
+
+.service__title::after {
+  margin-left: 23px;
+  margin-left: 2.3rem;
+}
+
+.service__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 70px;
+  margin-bottom: 7rem;
+}
+
+.service__box {
+  position: relative;
+  width: 100%;
+}
+
+.service__txt {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  font-size: 4rem;
+  font-style: italic;
+  color: #FFFFFF;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.service__txt:hover {
+  background: #282F35;
+  opacity: 0.7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.service .bg__txt {
+  max-width: 1200px;
+  width: 96%;
+  margin: 0 auto;
+  text-align: right;
+  letter-spacing: .05em;
+}
+
+/* service end
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+/* contact
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.contact {
+  background: url(../img/contact-bgi@2x.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 110px;
+  padding-top: 11rem;
+  padding-bottom: 66px;
+  padding-bottom: 6.6rem;
+}
+
+.contact .title {
+  color: #FFFFFF;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 79px;
+  margin-bottom: 7.9rem;
+  letter-spacing: .09em;
+}
+
+.contact .title::after {
+  background-color: #FFFFFF;
+}
+
+.contact__txt {
+  margin-bottom: 45px;
+  margin-bottom: 4.5rem;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.contact .bg__txt {
+  color: #FFFFFF;
+  letter-spacing: .05em;
+}
+
+/* contact end
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 @media (max-width: 768px) {
+  .section__inner {
+    width: 92%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .title::after {
+    width: 100px;
+  }
+  .bg__txt {
+    font-size: 4rem;
+  }
+  .header__list {
+    display: none;
+  }
+  .header__buger {
+    display: block;
+  }
+  .header__buger-btn {
+    position: fixed;
+    top: 16px;
+    right: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 90;
+  }
+  .header__buger-btn span, .header__buger-btn span::before, .header__buger-btn span::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    position: absolute;
+  }
+  .header__buger-btn span:before {
+    bottom: 8px;
+  }
+  .header__buger-btn span:after {
+    top: 8px;
+  }
   .btn {
     margin-bottom: 4rem;
   }
-  .u-hidden-sp {
-    display: none !important;
+  .contact__header .header__nav {
+    padding: 3rem 0;
   }
-}
-
-@media null {
-  .u-hidden-tab {
-    display: none !important;
+  .MV__contact {
+    padding-bottom: 5rem;
   }
-  .u-hidden-pc {
-    display: none !important;
+  .MV__contact .MV__title {
+    margin-bottom: 4rem;
+    padding-top: 17.5rem;
+    font-size: 3rem;
+    letter-spacing: .1em;
+  }
+  .form {
+    padding-top: 9.5rem;
+    padding-bottom: 8rem;
+  }
+  .form__inner {
+    padding: 0 4%;
+    margin-bottom: 6.5rem;
+  }
+  .form__checkBox {
+    margin-bottom: 1.5rem;
+  }
+  .form__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form__item {
+    margin-bottom: 0.5rem;
+  }
+  .form__label {
+    margin-bottom: 0.7rem;
+  }
+  .MV .inner {
+    padding-bottom: 0;
+  }
+  .MV__txt {
+    display: block;
+  }
+  .MV__title {
+    margin-bottom: 5.5rem;
+    padding-top: 20rem;
+    font-size: 3.7rem;
+  }
+  .MV__sub-title {
+    width: 27rem;
+    margin: 0 auto;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+  }
+  .concept {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+  }
+  .concept .sp-only {
+    display: block;
+  }
+  .concept__title {
+    padding-left: 0;
+    margin-bottom: 5rem;
+  }
+  .concept__sub-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  .concept__box-ly {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .concept__txt {
+    width: auto;
+    width: initial;
+    margin-bottom: 2.5rem;
+  }
+  .concept .concept__img {
+    width: 100%;
+    margin: 0 auto 4rem;
+  }
+  .concept .concept__img img {
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .works {
+    padding-top: 10rem;
+    padding-bottom: 4.5rem;
+  }
+  .works .inner {
+    width: 92%;
+  }
+  .works .title {
+    margin-bottom: 5rem;
+  }
+  .works .title::after {
+    margin-left: 3.2rem;
+  }
+  .card__container {
+    margin-bottom: 7.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card {
+    width: 93%;
+    max-width: 34rem;
+  }
+  .card + .card {
+    margin-top: 3rem;
+  }
+  .card + .card {
+    margin-left: 0;
+  }
+  .service {
+    padding-bottom: 5.8rem;
+  }
+  .service__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 4rem;
+  }
+  .service__box + .service__box {
+    margin-top: 3rem;
+  }
+  .service__txt {
+    font-size: 2rem;
+  }
+  .contact {
+    padding-top: 10rem;
+    padding-bottom: 4.6rem;
+  }
+  .contact__txt {
+    margin-bottom: 3.5rem;
   }
 }
 
